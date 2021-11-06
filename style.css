@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: #2a2a2a;
+	color:lightgray;
+	padding:0;
+	margin:0;
+	padding-bottom:20px;
+}
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 70px;
+	justify-content: space-around;
+	width: 100%;
+	background:#181818;
+	padding:10px;
+	position: fixed;
+	top:0;
+	z-index:2;
+}
+nav h1{
+	font-size:25px;
+}
+a.navbar__link{
+	margin-left:40px;
+	font-size:20px;
+}
+a{
+	color:darkgray;
+	text-decoration:none;
+	transition: 0.2s;
+	display: inline-block;
+}
+a:hover{
+	color:lightgray;
+	/*text-decoration:underline;*/
+	transform:scale(1.25);
+}
+a.logo{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color:lightgray;
+}
+#logoimage {
+  border-radius: 50%;
+  width: auto;
+}
+header{
+	background:#424242;
+	padding: 20px;
+	padding-left: 20%;
+}
+header::after{
+	content:"";
+	display:inline-block;
+	background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 150' preserveAspectRatio='none' style='height: 100%25; width: 100%25;'%3E%3Cpath d='M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z' style='stroke: none;fill: %23424242;'%3E%3C/path%3E%3C/svg%3E");
+	height:150px;
+	width:100%;
+	position: absolute;
+	left:0px;
+}
+header h1{
+    font-size: 60px;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px white, -1px 1px white, -1px -1px white, 1px -1px white;
+	margin:0px 0px 50px 0px;
+}
+header h3{
+	font-size:36px;
+	margin:0;
+}
+.header__hashtag{
+	color:darkgray;
+	font-size:24px;
+	margin-top:40px;
+	display:inline-block;
+	width:908px;
+}
+#projects{
+	margin-top:150px !important;
+}
+#projects, #users{
+	margin: auto;
+	width:fit-content;
+	text-align: center;
+}
+#projects h1, #users h1{
+	color: white;
+	font-size:36px;
+}
+.coolbutton{
+	border: 5px solid white;
+	color: white;
+	padding: 15px;
+	background: transparent;
+	font-size: 24px;
+	border-radius:8px;
+	font-weight:900;
+	cursor: pointer;
+}
+.project__image{
+	float:left;
+}
+#projects aside{
+	float:right;
+	margin-left:20px;
+}
+#projects figure{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	box-shadow:0px 0px 16px;
+	padding:32px;
+	transition:0.2s;
+}
+.testimonial{
+	background: lightgray;
+	display: flex;
+	flex-direction: row;
+	color: rgb(68, 68, 68);
+	padding: 20px;
+	border-radius:8px;
+	box-shadow: 0px 0px 8px white;
+	max-width:400px;
+	margin: 20px;
+}
+.testimonial img{
+	height:120px;
+	border-radius: 100%;
+	margin-right:20px;
+}
+.testimonial .author{
+	font-size:20px;
+	margin-top:10px;
+	display: inline-block;
+}
+#users > div{
+	display: flex;
+	flex-direction: row;
+}
+main{
+	margin-top:70px;
+	z-index: 1;
+}
