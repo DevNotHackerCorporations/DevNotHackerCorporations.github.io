@@ -8,3 +8,13 @@
 	width:100%;
 	justify-content: center;
 }
+.featuredpic{
+	width:350px;
+	position: absolute;
+    transform: translateY(-90%);
+}
+.featuredpiccont{
+	width:100%;
+	display: flex;
+	justify-content: center;
+}

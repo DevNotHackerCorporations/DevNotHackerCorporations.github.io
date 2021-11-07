@@ -72,29 +72,39 @@ header h1{
     letter-spacing: 3px;
     text-shadow: 1px 1px white, -1px 1px white, -1px -1px white, 1px -1px white;
 	margin:0px 0px 50px 0px;
+	word-wrap: break-word;
 }
 header h3{
 	font-size:36px;
 	margin:0;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 .header__hashtag{
 	color:darkgray;
 	font-size:24px;
 	margin-top:40px;
 	display:inline-block;
-	width:908px;
+	width:min(908px, calc(80vw - 20px));
 }
 #projects{
 	margin-top:150px !important;
 }
 #projects, #users{
-	margin: auto;
-	width:fit-content;
+	width:100%;
 	text-align: center;
+	display:flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
 }
 #projects h1, #users h1{
 	color: white;
 	font-size:36px;
+}
+.featured .coolbutton{
+	border: 5px solid yellow;
+	color:yellow;
 }
 .coolbutton{
 	border: 5px solid white;
@@ -120,6 +130,8 @@ header h3{
 	box-shadow:0px 0px 16px;
 	padding:32px;
 	transition:0.2s;
+	width:fit-content;
+	flex-wrap: wrap;
 }
 .testimonial{
 	background: lightgray;
@@ -146,6 +158,7 @@ header h3{
 	display: flex;
 	flex-direction: row;
 	flex-wrap:wrap;
+	justify-content: center;
 }
 main{
 	margin-top:70px;
@@ -159,4 +172,40 @@ footer{
 }
 footer a{
 	transform:none !important;
+}
+#gsugg{
+	text-align: center;
+    width: 100%;
+    background: #444444;
+    color: white;
+    padding: 20px;
+}
+#gsugg h1{
+	font-size: 36px;
+	word-wrap: break-word;
+	word-break: break-all;
+	margin:10px 0px;
+}
+#gsugg h2{
+	margin:4px 0px;
+	font-size: 25px;
+	color:lightgray;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+
+@media (max-width: 900px){
+	.logo h1{
+		display: none;
+	}
+}
+@media (max-width: 750px){
+	#projects figure{
+		flex-direction: column;
+	}
+}
+@media (max-width: 500px){
+	.project__image img{
+		width: 80vw !important;
+	}
 }
