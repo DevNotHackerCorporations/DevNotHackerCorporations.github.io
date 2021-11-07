@@ -145,6 +145,7 @@ header h3{
 #users > div{
 	display: flex;
 	flex-direction: row;
+	flex-wrap:wrap;
 }
 main{
 	margin-top:70px;
