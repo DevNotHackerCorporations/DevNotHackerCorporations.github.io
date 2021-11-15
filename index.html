@@ -11,15 +11,6 @@
       </script>
     </head>
     <body>
-		<nav>
-			<a href="#" class="logo">
-				<img src="https://chathere.cookiesnowowl.repl.co/favicon.jpg" style="height:50px" id="logoimage">
-				<h1>&nbsp;DevNotHackerCorporations</h1>
-			</a>
-			<a href="/about.html" class="navbar__link">About Us</a>
-			<a href="/projects.html" class="navbar__link">Our Projects</a>
-			<a href="/staff.html" class="navbar__link">Our Members</a>
-		</nav>
 		<main>
 			<header>
 				<marquee class="header__hashtag" scrollamount="10" behavior="scroll" truespeed="200">#company #cool #projects #webdev #full-stack-dev #dev</marquee>
@@ -44,7 +35,7 @@
 			<br>
 			<br>
 			<section id="users" style="background:#343434;padding-bottom:40px;">
-				<h1>Testimonials</h1>
+				<h1 id="userstestimonialtext">Testimonials</h1>
 				<div>
 					<div class="testimonial">
 						<img src="/assets/gamer.jpeg">
@@ -56,7 +47,7 @@
 					<div class="testimonial">
 						<img src="/assets/timmyd.jpeg">
 						<div>
-							<span class="author">Timothy Dong, Kid</span><br><br>
+							<span class="author">Timothy, Kid</span><br><br>
 							<span class="text"><i>DevNotHackerCorporations</i>'s service's are awesome. They are high quality, constantly maintained, and FREE!</span>
 						</div>
 					</div>
@@ -67,7 +58,18 @@
 							<span class="text"><i>DevNotHackerCorporations</i> has allowed me to get things done, quickly. It has been very useful, as I have been getting my work done much faster. Thanks to DevNotHackerCorporations.</span>
 						</div>
 					</div>
+					<div class="testimonial">
+						<img src="/assets/alexander.jpeg">
+						<div>
+							<span class="author">Alexander, aspiring student</span><br><br>
+							<span class="text">absolutely… stunning.</span>
+						</div>
+					</div>
 				</div>
+			</section>
+			<section id="blog">
+				<h1><a href="/blog.html" target="_blank">Read our blog!</a></h1>
+				<h2>Part of our most recent post:</h2>
 			</section>
 			<section id="gsugg">
 				<h1>Got Suggestions?</h1>
@@ -78,5 +80,27 @@
 		<footer>
 			This site is <a href="https://github.com/DevNotHackerCorporations/DevNotHackerCorporations.github.io" target="_blank">open source!</a> You can use the source code (if you follow <a href="https://github.com/DevNotHackerCorporations/DevNotHackerCorporations.github.io/blob/main/LICENSE.txt" target="_blank">the license</a>) or help us improve it!
 		</footer>
+		<script src="/site.js"></script>
+		<script>
+			function get_bp(){
+				fetch("/blog/posts.json").then(x => x.json()).then(p=>{
+					fetch("/blog/"+p[0]).then(x=>x.text()).then(post =>{
+						post = parse(post)
+						let poster = post.split("\n")[1]
+						let blogname = post.split("\n")[0]
+						let pt = post.split("\n")[2]
+						let posttime = new Date(parseInt(pt))
+						let timestring = (posttime.getMonth()+1)+"/"+posttime.getDate()+"/"+posttime.getFullYear()+" "+(posttime.getHours()%12)+":"+(posttime.getMinutes() < 10 ? "0":"")+posttime.getMinutes()+(posttime.getHours()%12 === posttime.getHours ? "AM":"PM")
+						document.getElementById("blog").innerHTML += `
+						<div class="post" style='max-height:1000px;overflow:hidden;-webkit-mask-image: linear-gradient(180deg,lightgray 60%,transparent);'>
+							<h1>${blogname}</h1>
+							<h2>By ${poster}, ${timestring}</h2>
+							<div class="message">${post.split("\n").slice(3).join("\n").replace(/\n/g, "<br>").replace(" ", "&nbsp;")}</div>
+						</div>`
+					})
+				})
+			}
+			get_bp()
+		</script>
     </body>
 </html>

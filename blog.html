@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>DevNotHackerCorporations</title>
+		<link rel="icon" type="image/jpg" href="https://chathere.cookiesnowowl.repl.co/favicon.jpg">
+		<link rel="stylesheet" href="/style.css">
+		<script>
+
+		</script>
+		<style>
+			.post{
+				background: white;
+				padding: 20px;
+				width: 50%;
+				margin-left: 25%;
+				margin-bottom:20px;
+			}
+			.post > h1{
+				color: black;
+				font-size: 36px;
+				margin: 8px 0px;
+			}
+			.post h2{
+				color:dimgray;
+				font-size: 28px;
+				margin:0;
+			}
+			.message{
+				color: black;
+				margin-top:20px;
+				font-family:inherit;
+				word-break:break-word;
+			}
+			.message :where(h1, h2, h3, h4, h5, h6){
+				color: black !important;
+			}
+			.message a{
+				color:dimgray !important;
+			}
+			.message a:hover{
+				color: black !important;
+				transform: none;
+			}
+			@media (max-width:800px){
+				.post{
+					width:95vw;
+					margin-left: 2.5vw;
+				}
+			}
+			@media (max-width:400px){
+				.message img{
+					width:calc(95vw - 40px);
+				}
+			}
+		</style>
+    </head>
+    <body>
+		<main>
+			<header>
+				<marquee class="header__hashtag" scrollamount="10" behavior="scroll" truespeed="200">#company #cool #projects #webdev #full-stack-dev #dev</marquee>
+				<h1>Our Blog</h1>
+				<h3>&ensp; A day in the life of a DevNotHackerCorporations-er</h3>
+			</header>
+			<section style="margin-top:150px;" id="bpost">
+				<h1 style="text-align:center;display:inline-block;width:100%;color:white;font-size:60px;">Fetching data. Please wait.<br><br>Fetching list of posts: <span id="bpost__listofposts" style="color:gold;">Pending</span><br>Fetching posts: <span id="bpost__fpost" style="color:pink;">0/?</span><br>Displaying Data: <span style="color:yellow;">In progress</span></h1>
+			</section>
+		</main>
+    </body>
+	<script src="/site.js"></script>
+	<script src="/blog.js"></script>
+</html>
