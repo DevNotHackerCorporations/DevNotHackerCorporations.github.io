@@ -49,4 +49,4 @@ i = setInterval(()=>{
 		})
 		clearInterval(i)
 	}
-}, 1000)
+}, 100)
