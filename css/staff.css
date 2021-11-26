@@ -1,0 +1,38 @@
+section {
+			/*padding-left:20%;*/
+			display: flex;
+			flex-direction: row;
+			row-gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		section>* {
+			flex: 1 1 auto;
+		}
+
+		.staffmem,
+		.staffmem * {
+			width: fit-content;
+			width: -moz-fit-content;
+			display: inline-block;
+		}
+
+		.staffmem img {
+			width: 100px;
+		}
+
+		.staffmem {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			margin: 20px;
+		}
+
+		body>main>h1,
+		body>main>h2 {
+			width: 100%;
+			margin: 0;
+			display: inline-block;
+			text-align: center;
+		}
