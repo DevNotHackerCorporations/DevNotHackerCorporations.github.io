@@ -221,7 +221,7 @@ footer a{
 		width:-moz-fit-content;
 		height: fit-content;
 		height:-moz-fit-content;
-		transition:0.5s ease max-height, 0.5s ease max-width, 1s justify-content, 1s align-items;
+		transition:0.5s linear max-height, 0.5s linear max-width, 1s justify-content, 1s align-items;
 	}
 	nav a{
 		margin:5px !important;

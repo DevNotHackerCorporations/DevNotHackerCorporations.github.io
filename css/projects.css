@@ -17,4 +17,8 @@
 	width:100%;
 	display: flex;
 	justify-content: center;
+}	
+#projects h3{
+	display: inline-block;
+	max-width: 500px;
 }
