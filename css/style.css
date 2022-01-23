@@ -124,6 +124,7 @@ header h3{
 }
 #projects figure{
 	display: flex;
+	justify-content: center;
 	flex-direction: row;
 	align-items: center;
 	box-shadow:0px 0px 16px;
@@ -131,6 +132,7 @@ header h3{
 	transition:0.2s;
 	width:fit-content;
 	flex-wrap: wrap;
+	max-width:900px;
 }
 .testimonial{
 	background: lightgray;
@@ -184,7 +186,7 @@ footer a{
 }
 #gsugg h1{
 	font-size: 36px;
-	word-wrap: break-word;
+	word-break: break-all;
 	margin:10px 0px;
 }
 #gsugg h2{
@@ -293,4 +295,7 @@ footer a{
 	.message img{
 		width:calc(95vw - 40px);
 	}
+}
+img.round{
+	border-radius:50%;
 }
